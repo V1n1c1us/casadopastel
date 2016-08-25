@@ -1,0 +1,56 @@
+/* â†“â†“â†“â†“â†“â†“â†“â†“â†“â†“â†“â†“â†“â†“â†“â†“  Animations  â†“â†“â†“â†“â†“â†“â†“â†“â†“â†“â†“â†“â†“â†“â†“â†“ */
+.animate {
+	opacity: 0 !important;
+}
+
+.top,
+.bottom {
+	opacity: 1;
+	
+	-webkit-transition: all .5s ease-in-out;
+	-moz-transition: all .5s ease-in-out;
+	-ms-transition: all .5s ease-in-out;
+	-o-transition: all .5s ease-in-out;
+	transition: all .5s ease-in-out;
+	
+	-webkit-transform: translateX(0%) translateY(0%);
+	-moz-transform: translateX(0%) translateY(0%);
+	-ms-transform: translateX(0%) translateY(0%);
+	-o-transform: translateX(0%) translateY(0%);
+	transform: translateX(0%) translateY(0%);
+}
+
+.animate.bottom {
+	-webkit-transform: translateY(25%);
+	-moz-transform: translateY(25%);
+	-ms-transform: translateY(25%);
+	-o-transform: translateY(25%);
+	transform: translateY(25%);
+}
+
+.animate.top {
+	-webkit-transform: translateY(-25%);
+	-moz-transform: translateY(-25%);
+	-ms-transform: translateY(-25%);
+	-o-transform: translateY(-25%);
+	transform: translateY(-25%);
+}
+
+/* Outhers */
+.hover {
+	display: inline-block;
+	-webkit-transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
+	-ms-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+}
+
+.hover:hover {
+	-webkit-transform: translateY(-10%);
+	-moz-transform: translateY(-10%);
+	-ms-transform: translateY(-10%);
+	-o-transform: translateY(-10%);
+	transform: translateY(-10%);
+}
+/* â†‘â†‘â†‘â†‘â†‘â†‘â†‘â†‘â†‘â†‘â†‘â†‘â†‘â†‘â†‘â†‘  End Animations  â†‘â†‘â†‘â†‘â†‘â†‘â†‘â†‘â†‘â†‘â†‘â†‘â†‘â†‘â†‘â†‘ */
