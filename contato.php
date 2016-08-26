@@ -30,11 +30,11 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right" style="transition-delay: 0s; animation-delay: 0s;">
-                    <li class='active'><a href="index.php">home</a></li>
+                    <li><a href="index2.php">home</a></li>
                     <li><a href="#">cardápio</a></li>
                     <li><a href="#">pedido online</a></li>
                     <li><a href="#">empresa</a></li>
-                    <li><a href="contato.php">contatos</a></li>
+                    <li class="active-menu"><a href="contato.php">contatos</a></li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
