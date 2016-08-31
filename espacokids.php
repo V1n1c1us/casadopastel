@@ -33,7 +33,7 @@
                     <li><a href="index2.php">home</a></li>
                     <li><a href="#">cardápio</a></li>
                     <li><a href="#">pedido online</a></li>
-                    <li class="dropdown">
+                    <li class="dropdown active-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                            aria-expanded="false">Empresa <span class="caret"></span></a>
                         <ul class="dropdown-menu teste">
@@ -41,7 +41,7 @@
                             <li class="menu-principal"><a href="espacokids.php">espaço kids</a></li>
                         </ul>
                     </li>
-                    <li class="active-menu"><a href="contato.php">contatos</a></li>
+                    <li><a href="contato.php">contatos</a></li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -53,64 +53,38 @@
 <section class="titulo-contato">
     <div class="container">
         <div class="row">
-            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"></div>
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                <div class="trabalhe-header">
-                    <h1 class="animate top">Trabalhe Conosco</h1>
-                </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12"></div>
+            <div id="cardapio-header" class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                <h1 class="animate top">Espaço Kids</h1>
             </div>
-            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"></div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12"></div>
         </div>
     </div>
 </section>
 <div class="container">
-    <div class="contatos">
-        <div class="row">
-            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"></div>
-            <div class=" col-lg-6 col-md-6 col-sm-6 col-xs-12 animate top">
-                <div class="titulo-contatos-form">
-                    <h3>Envie seu currículo</h3>
-                </div>
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="empresa-kids">
+                <p>Espaço Kids na Casa do Pastel da Ângelo Bolson, 338</p>
 
-                <form id="contact" class="form-contatos" onSubmit="return false" method="post">
-                    <h4 class="form-header">Utilize o formulário abaixo para enviar seu currículo para a Casa do Pastel.</h4>
-                    <input type="hidden" value="1" id="send" name="send">
+                <p>Mamães e papais a Casa do Pastel da Ângelo Bolson, tem um espaço pensado para a criançada, com
+                    brinquedos pedagógicos, jogos recreativos, vídeos, brincadeiras lúdicas e principalmente com o
+                    serviço de recreacionista.</p>
 
-                    <div class="form-group">
-                        <input type="nome" class="form-control placetxt" id="nome" placeholder="Nome">
-                    </div>
-                    <div class="form-group">
-                        <input type="email" class="form-control placetxt" id="email" placeholder="Email">
-                    </div>
-                    <div class="form-group">
-                        <input type="fone" class="form-control placetxt" id="fone" placeholder="Fone">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputFile">Envie seu currículo</label>
-                        <input type="file" id="sendFile">
-                    </div>
-                    <div class="button-send">
-                        <a onclick="sending()"><img src="images/button-send.png" alt="Enviar"> <span
-                                class="button-send-txt">Enviar</span></a>
-                    </div>
-                    <p id="send-info2"></p>
-
-                    <script>
-                        function sending() //AJAX para enviar o email, vai no html
-                        {
-                            var posting = $.post("inc/sendmail.php", $("#contact").serialize());
-                            posting.done(function (data) {
-                                $("#send-info2").html(data); //id da div de retorno
-                            });
-                        }
-                    </script>
-                </form>
+                <p>Aberto todos os dias da semana, no horário de atendimento da Casa</p>
             </div>
-            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"></div>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 espacokids-carousel">
+            <div class="owl-carousel">
+                <img class="item" src="images/img-espacokids-1.png" alt="">
+                <img class="item" src="images/img-espacokids-2.png" alt="">
+                <img class="item" src="images/img-espacokids-3.png" alt="">
+            </div>
         </div>
     </div>
+
 </div>
-<footer>
+<footer class="empresa">
     <div class="clearfix"></div>
     <div class="icon-facebook animate bottom">
         <a href="https://www.facebook.com/casadopastel.pastelaria/?fref=ts" target="_blank">
@@ -120,7 +94,6 @@
     <div class="copy animate bottom">
         <p>© Copyright 2016 Casa do Pastel Todos os Direitos Reservados.</p>
     </div>
-    </div>
 </footer>
 <div class="buttom-top hidden-xs">
     <div class="go-top"><img src="images/button-top.png" alt="topo"></div>
@@ -129,5 +102,30 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="js/custom.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+
+<script>
+    $('.owl-carousel').owlCarousel({
+        loop: true,
+        margin: 10,
+        responsiveClass: true,
+        nav: false,
+        responsive: {
+            0: {
+                items: 1,
+                nav: false
+            },
+            600: {
+                items: 3,
+                nav: false
+            },
+            1000: {
+                items: 3,
+                nav: false,
+                loop: false
+            }
+        }
+    });
+</script>
 </body>
 </html>

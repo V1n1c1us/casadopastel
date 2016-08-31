@@ -72,10 +72,33 @@ body {
     background-color: #573211;
 }
 
+.navbar-nav {
+    float: none;
+}
+
+.dropdown-menu li.menu-principal {
+    margin-top: 2px;
+    background: #ff9a00;
+    border-bottom: 3px solid transparent;
+    border-radius: 10px;
+}
+
+.dropdown-menu li.menu-principal a:hover {
+    border-radius: 10px;
+    font-size: 20px;
+    line-height: 40px;
+}
+
+.dropdown-menu li.menu-principal a {
+    font-size: 20px;
+    line-height: 40px;
+}
+
 /*BANNER*/
 #banner-principal {
     max-height: 630px;
     overflow: hidden;
+    z-index: -10000;
 }
 
 #middle {
@@ -538,10 +561,78 @@ img.img-contatos {
     margin-left: 5px;
 }
 
-.form-header{
+.form-header {
     font-family: 'PT Sans', sans-serif;
     font-size: 15px;
 }
+
+.empresa-header {
+    margin-top: 160px;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #573211;
+}
+
+.empresa-texto {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #573211;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.empresa-texto1 {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #573211;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+.empresa-texto2 {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #573211;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+.empresa-carousel {
+    background: url("../images/img-empresa-end-1.png") no-repeat;
+    padding-left: 90px;
+}
+
+.empresa-carousel2 {
+    background: url("../images/img-empresa-end-2.png") no-repeat;
+    padding-left: 90px;
+}
+
+.empresa-carousel3 {
+    background: url("../images/img-empresa-end-3.png") no-repeat;
+    padding-left: 90px;
+}
+
+.espacokids-carousel {
+    background: url("../images/img-espacokids-end.png") no-repeat;
+    padding-left: 90px;
+}
+
+.empresa-kids p {
+    margin-top: 46px;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #573211;
+}
+
+footer.empresa {
+    margin-top: 125px;
+}
+
 @media (max-width: 991px) {
     .area-logo {
         width: 100%;
@@ -622,7 +713,7 @@ img.img-contatos {
     }
 
     #cardapio-header h1 {
-
+        font-size: 60px;
     }
 
     img.img-contatos {
@@ -649,8 +740,27 @@ img.img-contatos {
         font-size: 13px;
     }
 
-    .icon-facebook{
-        margin-top: 30px ;
+    .icon-facebook {
+        margin-top: 30px;
+    }
+
+    footer.empresa {
+        margin-top: auto;
+    }
+
+    .empresa-header {
+        margin-top: 50px;
+    }
+
+    .empresa-carousel, .empresa-carousel2, .empresa-carousel3, .espacokids-carousel {
+        background-position: 3%;
+        background-size: contain;
+    }
+}
+
+@media (min-width: 1024px) {
+    .trabalhe-header h1 {
+        font-size: 70px;
     }
 }
 

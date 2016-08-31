@@ -33,7 +33,14 @@
                     <li><a href="index2.php">home</a></li>
                     <li><a href="#">cardápio</a></li>
                     <li><a href="#">pedido online</a></li>
-                    <li><a href="#">empresa</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                           aria-expanded="false">Empresa <span class="caret"></span></a>
+                        <ul class="dropdown-menu teste">
+                            <li class="menu-principal"><a href="empresa.php">sobre nós</a></li>
+                            <li class="menu-principal"><a href="espacokids.php">espaço kids</a></li>
+                        </ul>
+                    </li>
                     <li class="active-menu"><a href="contato.php">contatos</a></li>
                 </ul>
             </div>
@@ -178,7 +185,9 @@
                 </form>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                <img src="images/middle-facebook-contato.png" alt="" class="img-contatos animate top">
+                <a href="https://www.facebook.com/casadopastel.pastelaria/?fref=ts" target="_blank">
+                    <img src="images/middle-facebook-contato.png" alt="" class="img-contatos animate top">
+                </a>
             </div>
         </div>
     </div>

@@ -31,11 +31,18 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right" style="transition-delay: 0s; animation-delay: 0s;">
-                    <li class='active-menu'><a href="index2.php">home</a></li>
+                    <li><a href="index2.php">home</a></li>
                     <li><a href="#">cardápio</a></li>
                     <li><a href="#">pedido online</a></li>
-                    <li><a href="#">empresa</a></li>
-                    <li><a href="contato.php">contatos</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                           aria-expanded="false">Empresa <span class="caret"></span></a>
+                        <ul class="dropdown-menu teste">
+                            <li class="menu-principal"><a href="empresa.php">sobre nós</a></li>
+                            <li class="menu-principal"><a href="espacokids.php">espaço kids</a></li>
+                        </ul>
+                    </li>
+                    <li class="active-menu"><a href="contato.php">contatos</a></li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -85,45 +92,96 @@
         </div>
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <ul class="nav navbar " id="cardapio-menu">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse"
-                                data-target="#bs-example-navbar-collapse-2">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                    </div>
-                    <li class="dropdown col-md-2">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                           aria-expanded="false">Pastéis <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li class="col-md-12 menu-pasteis-novos menu-pasteis-novos-p2 menu-pasteis-p3"><a onclick="menuList('pasteis-novos')">Novos Sabores</a></li>
-                            <li class="col-md-12 menu-pasteis menu-pasteis-p2 menu-pasteis-p3"><a onclick="menuList('pasteis-brocolis')">Brócilis</a></li>
-                            <li class="col-md-12 menu-pasteis-calabresa"><a onclick="menuList('pasteis-calabresa')">Calabresa</a></li>
-                            <li class="col-md-12 menu-pasteis-camarao"><a onclick="menuList('pasteis-camarao')">Camarão</a></li>
-                            <li class="col-md-12 menu-pasteis-carne menu-pasteis-carne-p2"><a onclick="menuList('pasteis-carne')">Carne</a></li>
-                            <li class="col-md-12 menu-pasteis-chester"><a onclick="menuList('pasteis-chester')">Chester</a></li>
-                            <li class="col-md-12 menu-pasteis-coracao"><a onclick="menuList('pasteis-coracao')">Coração</a></li>
-                            <li class="col-md-12 menu-pasteis-frango menu-pasteis-frango-p2"><a onclick="menuList('pasteis-frango')">Frango</a></li>
-                            <li class="col-md-12 menu-pasteis-lombo"><a onclick="menuList('pasteis-lombo')">Lombo</a></li>
-                            <li class="col-md-12 menu-pasteis-palmito"><a onclick="menuList('pasteis-palmito')">Palmito</a></li>
-                            <li class="col-md-12 menu-pasteis-presunto"><a
-                                    onclick="menuList('pasteis-presunto')">Presunto</a></li>
-                            <li class="col-md-12 menu-pasteis-queijo"><a
-                                    onclick="menuList('pasteis-queijo')">Queijo</a></li>
-                        </ul>
-                    </li>
-                    <li class="col-md-2 menu-pasteis-lights menu-pasteis-lights-p2"><a
-                            onclick="menuList('pasteis-lights')">Pastéis Lights</a></li>
-                    <li class="col-md-2 menu-pasteis-doces menu-pasteis-doces-p2"><a
-                            onclick="menuList('pasteis-doces')">Pasteis Doces</a></li>
-                    <li class="col-md-2 menu-sanduiches"><a onclick="menuList('sanduiches')">Sanduíches</a></li>
-                    <li class="col-md-2 menu-porcoes-extras"><a onclick="menuList('porcoes-extras')"><span
-                                class="hidden-md hidden-sm">Porções </span>Extras</a></li>
-                    <li class="col-md-2 menu-combokids"><a onclick="menuList('combokids')">Combo Kids</a></li>
-                </ul>
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+                    <ul class="nav navbar-nav" id="cardapio-menu">
+                        <li class="dropdown col-md-2">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pastéis <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li class="col-md-12 menu-pasteis-novos menu-pasteis-novos-p2 menu-pasteis-p3"><a onclick="menuList('pasteis-novos')">Novos Sabores</a></li>
+                                <li class="col-md-12 menu-pasteis menu-pasteis-p2 menu-pasteis-p3"><a
+                                        onclick="menuList('pasteis-brocolis')">Brócilis</a></li>
+                                <li class="col-md-12 menu-pasteis-calabresa"><a onclick="menuList('pasteis-calabresa')">Calabresa</a>
+                                </li>
+                                <li class="col-md-12 menu-pasteis-camarao"><a onclick="menuList('pasteis-camarao')">Camarão</a>
+                                </li>
+                                <li class="col-md-12 menu-pasteis-carne menu-pasteis-carne-p2"><a
+                                        onclick="menuList('pasteis-carne')">Carne</a></li>
+                                <li class="col-md-12 menu-pasteis-chester"><a onclick="menuList('pasteis-chester')">Chester</a>
+                                </li>
+                                <li class="col-md-12 menu-pasteis-coracao"><a onclick="menuList('pasteis-coracao')">Coração</a>
+                                </li>
+                                <li class="col-md-12 menu-pasteis-frango menu-pasteis-frango-p2"><a
+                                        onclick="menuList('pasteis-frango')">Frango</a></li>
+                                <li class="col-md-12 menu-pasteis-lombo"><a
+                                        onclick="menuList('pasteis-lombo')">Lombo</a></li>
+                                <li class="col-md-12 menu-pasteis-palmito"><a onclick="menuList('pasteis-palmito')">Palmito</a>
+                                </li>
+                                <li class="col-md-12 menu-pasteis-presunto"><a
+                                        onclick="menuList('pasteis-presunto')">Presunto</a></li>
+                                <li class="col-md-12 menu-pasteis-queijo"><a
+                                        onclick="menuList('pasteis-queijo')">Queijo</a></li>
+                            </ul>
+                        </li>
+                        <li class="col-md-2 menu-pasteis-lights menu-pasteis-lights-p2"><a
+                                onclick="menuList('pasteis-lights')">Pastéis Lights</a>
+                        </li>
+                        <li class="col-md-2 menu-pasteis-doces menu-pasteis-doces-p2"><a
+                                onclick="menuList('pasteis-doces')">Pasteis Doces</a></li>
+                        <li class="col-md-2 menu-sanduiches"><a onclick="menuList('sanduiches')">Sanduíches</a></li>
+                        <li class="col-md-2 menu-porcoes-extras"><a onclick="menuList('porcoes-extras')"><span
+                                    class="hidden-md hidden-sm">Porções </span>Extras</a></li>
+                        <li class="col-md-2 menu-combokids"><a onclick="menuList('combokids')">Combo Kids</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+<!--                <ul class="nav navbar" id="cardapio-menu">-->
+<!--                    <div class="navbar-header">-->
+<!--                        <button type="button" class="navbar-toggle" data-toggle="collapse"-->
+<!--                                data-target="#bs-example-navbar-collapse-2">-->
+<!--                            <span class="sr-only">Toggle navigation</span>-->
+<!--                            <span class="icon-bar"></span>-->
+<!--                            <span class="icon-bar"></span>-->
+<!--                            <span class="icon-bar"></span>-->
+<!--                        </button>-->
+<!--                    </div>-->
+<!--                    <li class="dropdown col-md-2">-->
+<!--                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"-->
+<!--                           aria-expanded="false">Pastéis <span class="caret"></span></a>-->
+<!--                        <ul class="dropdown-menu">-->
+<!--                            <li class="col-md-12 menu-pasteis-novos menu-pasteis-novos-p2 menu-pasteis-p3"><a onclick="menuList('pasteis-novos')">Novos Sabores</a></li>-->
+<!--                            <li class="col-md-12 menu-pasteis menu-pasteis-p2 menu-pasteis-p3"><a onclick="menuList('pasteis-brocolis')">Brócilis</a></li>-->
+<!--                            <li class="col-md-12 menu-pasteis-calabresa"><a onclick="menuList('pasteis-calabresa')">Calabresa</a></li>-->
+<!--                            <li class="col-md-12 menu-pasteis-camarao"><a onclick="menuList('pasteis-camarao')">Camarão</a></li>-->
+<!--                            <li class="col-md-12 menu-pasteis-carne menu-pasteis-carne-p2"><a onclick="menuList('pasteis-carne')">Carne</a></li>-->
+<!--                            <li class="col-md-12 menu-pasteis-chester"><a onclick="menuList('pasteis-chester')">Chester</a></li>-->
+<!--                            <li class="col-md-12 menu-pasteis-coracao"><a onclick="menuList('pasteis-coracao')">Coração</a></li>-->
+<!--                            <li class="col-md-12 menu-pasteis-frango menu-pasteis-frango-p2"><a onclick="menuList('pasteis-frango')">Frango</a></li>-->
+<!--                            <li class="col-md-12 menu-pasteis-lombo"><a onclick="menuList('pasteis-lombo')">Lombo</a></li>-->
+<!--                            <li class="col-md-12 menu-pasteis-palmito"><a onclick="menuList('pasteis-palmito')">Palmito</a></li>-->
+<!--                            <li class="col-md-12 menu-pasteis-presunto"><a-->
+<!--                                    onclick="menuList('pasteis-presunto')">Presunto</a></li>-->
+<!--                            <li class="col-md-12 menu-pasteis-queijo"><a-->
+<!--                                    onclick="menuList('pasteis-queijo')">Queijo</a></li>-->
+<!--                        </ul>-->
+<!--                    </li>-->
+<!--                    <li class="col-md-2 menu-pasteis-lights menu-pasteis-lights-p2"><a-->
+<!--                            onclick="menuList('pasteis-lights')">Pastéis Lights</a></li>-->
+<!--                    <li class="col-md-2 menu-pasteis-doces menu-pasteis-doces-p2"><a-->
+<!--                            onclick="menuList('pasteis-doces')">Pasteis Doces</a></li>-->
+<!--                    <li class="col-md-2 menu-sanduiches"><a onclick="menuList('sanduiches')">Sanduíches</a></li>-->
+<!--                    <li class="col-md-2 menu-porcoes-extras"><a onclick="menuList('porcoes-extras')"><span-->
+<!--                                class="hidden-md hidden-sm">Porções </span>Extras</a></li>-->
+<!--                    <li class="col-md-2 menu-combokids"><a onclick="menuList('combokids')">Combo Kids</a></li>-->
+<!--                </ul>-->
             </div>
         </div>
         <div class="row" id="cardapio-itens">
